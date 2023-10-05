@@ -1,5 +1,9 @@
-@use '../../styles/variables' as v;
+@use '../../../styles/variables' as v;
 
-.App {
-
+.quotes {
+  width: 80%;
+  margin: v.$gutter auto;
+  padding: v.$gutter;
+  text-align: center;
+  border: solid 1px;
 }

@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as v;
+
+footer {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: v.$gutter;
+}

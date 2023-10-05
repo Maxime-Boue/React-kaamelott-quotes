@@ -1,3 +1,5 @@
+import './Quotes.scss';
+
 function Quotes() {
   return <p className="quotes">coucou je suis la citation random</p>;
 }

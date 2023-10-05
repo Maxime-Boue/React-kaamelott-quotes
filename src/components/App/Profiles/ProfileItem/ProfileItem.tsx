@@ -9,7 +9,9 @@ function ProfileItem() {
         alt="profil de ...."
       />
       <p className="profile__name">Spurius Cordius Frontinius</p>
-      <button className="profile__button">Citation</button>
+      <button type="button" className="profile__button">
+        Citation
+      </button>
     </article>
   );
 }
