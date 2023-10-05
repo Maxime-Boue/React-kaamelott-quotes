@@ -1,5 +1,10 @@
-@use '../../styles/variables' as v;
+@use '../../../styles/variables' as v;
 
-.App {
-
+.profiles {
+  display: flex;
+  flex-grow: 4;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(180, 125, 125);
+  padding: v.$gutter;
 }
