@@ -1,17 +1,17 @@
+import { KaamelottType } from '../../../type/type';
 import ProfileItem from './ProfileItem/ProfileItem';
 import './Profiles.scss';
 
-function Profiles() {
+type ProfilesProps = {
+  personnages: string[];
+};
+
+function Profiles({ personnages }: ProfilesProps) {
   return (
     <div className="profiles">
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
-      <ProfileItem />
+      {personnages.map((personnage) => (
+        <ProfileItem key={personnage} personnage={personnage} />
+      ))}
     </div>
   );
 }
