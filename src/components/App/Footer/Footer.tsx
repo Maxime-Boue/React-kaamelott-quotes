@@ -1,5 +1,9 @@
 function Footer() {
-  return <a href="coucou">Maxime Boué, Nicolas Saumont © 2023</a>;
+  return (
+    <footer>
+      <a href="coucou">Maxime Boué, Nicolas Saumont © 2023</a>
+    </footer>
+  );
 }
 
 export default Footer;

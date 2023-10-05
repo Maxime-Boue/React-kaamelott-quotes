@@ -1,5 +1,13 @@
-@use '../../styles/variables' as v;
+@use '../../../../styles/variables' as v;
 
-.App {
+.navbar {
+  display: flex;
+  background-color: bisque;
+  gap: v.$gutter;
 
+  &__link {
+    text-decoration: none;
+  }
+  https://kaamelott.chaudie.re/api/personnage/Arthur/pic
+  https://kaamelott.chaudie.re/api/personnage/Perceval/pic
 }

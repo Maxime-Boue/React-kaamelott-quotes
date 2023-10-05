@@ -1,5 +1,13 @@
 @use '../../styles/variables' as v;
 
 .App {
-
+  width: 80%;
+  max-width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding-bottom: v.$gutter;
 }

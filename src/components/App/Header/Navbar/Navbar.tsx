@@ -1,14 +1,16 @@
+import './Navbar.scss';
+
 function Navbar() {
   return (
     <nav className="navbar">
       <a className="navbar__link" href="https://www.google.com">
-        Lien
+        Home
       </a>
       <a className="navbar__link" href="https://www.google.com">
-        Lien
+        Personnages
       </a>
       <a className="navbar__link" href="https://www.google.com">
-        Lien
+        Livres
       </a>
     </nav>
   );

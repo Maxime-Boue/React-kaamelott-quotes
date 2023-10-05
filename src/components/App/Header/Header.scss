@@ -1,5 +1,9 @@
-@use '../../styles/variables' as v;
+@use '../../../styles/variables' as v;
 
-.App {
-
+.header {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: v.$gutter; 
 }
