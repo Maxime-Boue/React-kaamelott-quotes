@@ -12,7 +12,7 @@
 
 :root {
   --timing: 400ms;
-  --rotation: 30deg;
+  --rotation: 25deg;
 }
 
 body {
@@ -46,11 +46,11 @@ img {
   background-image: radial-gradient(circle, transparent 75px, black);
   opacity: 0;
   transition: opacity var(--timing);
+  border-radius: 10px;
 }
 
 .character:hover::before {
   opacity: 1;
-  border-radius: 10px;
 }
 
 .character::after {
