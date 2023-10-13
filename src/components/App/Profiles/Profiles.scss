@@ -12,7 +12,7 @@
 
 :root {
   --timing: 400ms;
-  --rotation: 20deg;
+  --rotation: 30deg;
 }
 
 body {
@@ -28,7 +28,7 @@ img {
 
 .character {
   width: 150px;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 9;
   position: relative;
   transform-style: preserve-3d;
   transition: rotate var(--timing) ease;
@@ -43,7 +43,7 @@ img {
   position: absolute;
   inset: 0;
   z-index: 100;
-  background-image: radial-gradient(circle, transparent 100px, black);
+  background-image: radial-gradient(circle, transparent 75px, black);
   opacity: 0;
   transition: opacity var(--timing);
 }
@@ -88,12 +88,12 @@ img {
   z-index: 1000;
   width: 65%;
   margin-inline: auto;
-  inset: auto 0 2rem;
+  inset: auto 0 1rem;
   transition: var(--timing);
 }
 
 .character:hover .name {
-  transform: translateY(-2rem) translateZ(100px);
+  transform: translateY(-1rem) translateZ(100px);
   rotate: x calc(var(--rotation) * -1);
 }
 
