@@ -2,7 +2,8 @@
 
 .button {
   width: 30%;
-  margin: v.$gutter auto;
+  margin: calc(v.$gutter * 0.5) auto;
+  margin-top: v.$gutter;
   padding: v.$gutter;
   border-radius: 1.5rem;
   border: none;

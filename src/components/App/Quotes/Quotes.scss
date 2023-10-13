@@ -1,9 +1,37 @@
 @use '../../../styles/variables' as v;
 
 .quotes {
-  width: 80%;
-  margin: v.$gutter auto;
-  padding: v.$gutter;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 v.$gutter;
   text-align: center;
-  border: solid 1px;
+
+  .interpreter {
+    width: 190px;
+  }
+
+  .quote {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 1em -10px black;
+    width: 100%;
+    height: 80%;
+    border-radius: v.$gutter;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 75px;
+      height: 50px;
+      left: -70px;
+      top: 20px;
+      background: white;
+      clip-path: polygon(38% 0, 100% 100%, 100% 0);
+    }
+  }
 }

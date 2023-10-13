@@ -37,6 +37,23 @@ function Profiles({ personnages }: ProfilesProps) {
 
   return (
     <div className="profiles">
+      <div className="character">
+        <img
+          src="../../../assets/img/arthur-name.png"
+          alt=""
+          className="name"
+        />
+        <img
+          src="../../../assets/img/arthur-front-image.png"
+          alt=""
+          className="front-image"
+        />
+        <img
+          src="../../../assets/img/arthur-back-image.jpg"
+          alt=""
+          className="back-image"
+        />
+      </div>
       {personnagesUniques.map((personnage) => (
         <ProfileItem
           key={personnage.character}

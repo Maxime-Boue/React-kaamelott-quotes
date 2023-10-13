@@ -3,7 +3,7 @@ import './GeneratorButton.scss';
 function GeneratorButton() {
   return (
     <button type="button" className="button">
-      Générer la citation
+      INTERPREEEETE !!!
     </button>
   );
 }

@@ -14,7 +14,7 @@ function ProfileItem({ personnage }: ProfileItemProps) {
       />
       <p className="profile__name">{personnage}</p>
       <button type="button" className="profile__button">
-        Citation
+        Interprète !
       </button>
     </article>
   );
