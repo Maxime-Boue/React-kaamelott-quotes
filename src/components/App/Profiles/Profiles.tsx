@@ -30,7 +30,7 @@ function Profiles({ personnages }: ProfilesProps) {
       personnagesUniques.push(personnage);
     }
 
-    if (personnagesUniques.length >= 8) {
+    if (personnagesUniques.length >= 5) {
       break;
     }
   }
