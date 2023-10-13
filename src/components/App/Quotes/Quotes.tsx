@@ -1,6 +1,10 @@
 import './Quotes.scss';
 
-function Quotes() {
+type QuotesProps = {
+  citation: string;
+};
+
+function Quotes({ citation }: QuotesProps) {
   return (
     <div className="quotes">
       <img
@@ -8,7 +12,7 @@ function Quotes() {
         src="../../../assets/img/interprete.png"
         alt="interprete"
       />
-      <p className="quote">"Coucou je suis la citation random."</p>
+      <p className="quote">{citation}</p>
     </div>
   );
 }

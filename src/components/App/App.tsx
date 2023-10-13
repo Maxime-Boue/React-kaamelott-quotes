@@ -10,13 +10,14 @@ import quotesData from '../../data/quotes.json';
 
 function App() {
   const [quote, setQuote] = useState('One super hilarious quote');
+
   return (
     <div className="App">
       <Header />
       <main>
-        <Profiles personnages={quotesData} />
+        <Profiles personnages={quotesData} setQuote={setQuote} />
         <GeneratorButton />
-        <Quotes profile={quote} />
+        <Quotes citation={`"${quote}"`} />
       </main>
       <Footer />
     </div>

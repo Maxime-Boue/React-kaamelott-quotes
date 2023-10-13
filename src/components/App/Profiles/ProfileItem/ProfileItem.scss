@@ -16,3 +16,109 @@
     border-radius: 50%;
   }
 }
+
+:root {
+  --timing: 400ms;
+  --rotation: 25deg;
+}
+
+img {
+  max-width: 100%;
+}
+
+.character {
+  cursor: pointer;
+  width: 150px;
+  aspect-ratio: 9 / 11;
+  margin-bottom: v.$gutter;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: rotate var(--timing) ease;
+}
+
+.character:hover {
+  rotate: x var(--rotation);
+}
+
+.character::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  background-image: radial-gradient(circle, transparent 75px, black);
+  opacity: 0;
+  transition: opacity var(--timing);
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.character:hover::before {
+  opacity: 1;
+}
+
+.character::after {
+  content: '';
+  position: absolute;
+  inset: 80% 0.5rem 0.5rem;
+  translate: 0;
+  transform: translateZ(-100px);
+  background: black;
+  filter: blur(1rem);
+  z-index: 1;
+  transition: rotate var(--timing), translate var(--timing) ease;
+}
+
+.character:hover::after {
+  rotate: x calc(var(--rotation) * -1);
+  translate: 0 20px;
+}
+
+.back-image {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.name,
+.front-image {
+  position: absolute;
+}
+
+.name {
+  color: #fff;
+  text-align: center;
+  z-index: 1000;
+  width: 65%;
+  margin-inline: auto;
+  inset: auto 0 1rem;
+  transition: var(--timing);
+}
+
+.character:hover .name {
+  transform: translateY(-1rem) translateZ(100px);
+  rotate: x calc(var(--rotation) * -1);
+}
+
+.front-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* Le scale est à adapter en fonction de l'image en front*/
+  scale: 1.125;
+  transform-origin: bottom;
+  opacity: 0;
+  inset: 15% 0 0;
+  z-index: 100;
+  transition: var(--timing);
+}
+
+.character:hover .front-image {
+  opacity: 1;
+  /* Le translateY est à adapter en fonction de l'image en front*/
+  transform: translateY(-1.4rem) translateZ(0px);
+  rotate: x calc(var(--rotation) * -1);
+}

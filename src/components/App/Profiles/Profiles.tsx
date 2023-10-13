@@ -6,6 +6,7 @@ import './Profiles.scss';
 
 type ProfilesProps = {
   personnages: KaamelottType[];
+  setQuote: () => void;
 };
 
 function shuffleArray(array) {
@@ -17,7 +18,7 @@ function shuffleArray(array) {
   return array;
 }
 
-function Profiles({ personnages }: ProfilesProps) {
+function Profiles({ personnages, setQuote }: ProfilesProps) {
   const personnagesDejaAffiches = new Set();
 
   const personnagesUniques = [];
@@ -30,34 +31,18 @@ function Profiles({ personnages }: ProfilesProps) {
       personnagesUniques.push(personnage);
     }
 
-    if (personnagesUniques.length >= 5) {
+    if (personnagesUniques.length >= 8) {
       break;
     }
   }
 
   return (
     <div className="profiles">
-      <div className="character">
-        <img
-          src="../../../assets/img/arthur-name.png"
-          alt=""
-          className="name"
-        />
-        <img
-          src="../../../assets/img/arthur-front-image.png"
-          alt=""
-          className="front-image"
-        />
-        <img
-          src="../../../assets/img/arthur-back-image.jpg"
-          alt=""
-          className="back-image"
-        />
-      </div>
       {personnagesUniques.map((personnage) => (
         <ProfileItem
           key={personnage.character}
-          personnage={personnage.character}
+          personnage={personnage}
+          setQuote={setQuote}
         />
       ))}
     </div>
