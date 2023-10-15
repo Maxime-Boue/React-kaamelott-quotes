@@ -17,12 +17,12 @@ function ProfileItem({ personnage, setQuote }: ProfileItemProps) {
     <article className="character" onClick={handleClickSelector}>
       <p className="name">{personnage.character}</p>
       <img
-        src="../../../../../assets/img/arthur-front-image.png"
+        src="../../../../../assets/img/angharad-front-image.png"
         alt=""
         className="front-image"
       />
       <img
-        src="../../../../../assets/img/arthur-back-image.jpg"
+        src="../../../../../assets/img/angharad-back-image.png"
         alt=""
         className="back-image"
       />
