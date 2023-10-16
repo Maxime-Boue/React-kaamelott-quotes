@@ -1,16 +1,16 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-param-reassign */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { KaamelottType } from '../../../type/type';
 import ProfileItem from './ProfileItem/ProfileItem';
 import './Profiles.scss';
 
 type ProfilesProps = {
   personnages: KaamelottType[];
-  setQuote: () => void;
+  setQuote: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function shuffleArray(array) {
+function shuffleArray(array: KaamelottType[]) {
   // eslint-disable-next-line no-plusplus
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -20,21 +20,28 @@ function shuffleArray(array) {
 }
 
 function Profiles({ personnages, setQuote }: ProfilesProps) {
-  const personnagesDejaAffiches = new Set();
+  const [personnagesUniques, setPersonnagesUniques] = useState<KaamelottType[]>(
+    []
+  );
 
-  const personnagesUniques = [];
-  const personnagesMelanges = shuffleArray(personnages);
+  useEffect(() => {
+    const personnagesDejaAffiches = new Set();
+    const shuffledPersonnages = shuffleArray(personnages);
+    const uniquePersonnages = [];
 
-  for (const personnage of personnagesMelanges) {
-    if (!personnagesDejaAffiches.has(personnage.character)) {
-      personnagesDejaAffiches.add(personnage.character);
-      personnagesUniques.push(personnage);
+    for (const personnage of shuffledPersonnages) {
+      if (!personnagesDejaAffiches.has(personnage.character)) {
+        personnagesDejaAffiches.add(personnage.character);
+        uniquePersonnages.push(personnage);
+      }
+
+      if (uniquePersonnages.length >= 8) {
+        break;
+      }
     }
 
-    if (personnagesUniques.length >= 8) {
-      break;
-    }
-  }
+    setPersonnagesUniques(uniquePersonnages);
+  }, [personnages]);
 
   return (
     <div className="profiles">

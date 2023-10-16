@@ -4,5 +4,5 @@ export type KaamelottType = {
   author: string;
   season: string;
   title: string;
-  episode: string;
+  episode?: string;
 };

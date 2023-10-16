@@ -36,7 +36,8 @@ img {
   transition: rotate var(--timing) ease;
 }
 
-.character:hover {
+.character:hover,
+.character.active {
   rotate: x var(--rotation);
 }
 
@@ -52,7 +53,8 @@ img {
   border: 3px solid #fff;
 }
 
-.character:hover::before {
+.character:hover::before,
+.character.active::before {
   opacity: 1;
 }
 
@@ -68,7 +70,8 @@ img {
   transition: rotate var(--timing), translate var(--timing) ease;
 }
 
-.character:hover::after {
+.character:hover::after,
+.character.active::after {
   rotate: x calc(var(--rotation) * -1);
   translate: 0 20px;
 }
@@ -98,7 +101,8 @@ img {
   transition: var(--timing);
 }
 
-.character:hover .name {
+.character:hover .name,
+.character.active .name {
   transform: translateY(-1rem) translateZ(100px);
   rotate: x calc(var(--rotation) * -1);
 }
@@ -116,7 +120,8 @@ img {
   transition: var(--timing);
 }
 
-.character:hover .front-image {
+.character:hover .front-image,
+.character.active .front-image {
   opacity: 1;
   /* Le translateY est à adapter en fonction de l'image en front*/
   transform: translateY(-1.4rem) translateZ(0px);

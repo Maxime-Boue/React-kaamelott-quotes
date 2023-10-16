@@ -1,6 +1,5 @@
 import './App.scss';
-import { useEffect, useState } from 'react';
-// import axios from 'axios';
+import { useState } from 'react';
 import Header from './Header/Header';
 import Profiles from './Profiles/Profiles';
 import GeneratorButton from './GeneratorButton/GeneratorButton';
