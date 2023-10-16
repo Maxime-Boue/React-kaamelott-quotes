@@ -20,14 +20,16 @@ function ProfileItem({ personnage, setQuote }: ProfileItemProps) {
       <img
         src={`../../../../../assets/img/${personnage.character
           .toLowerCase()
-          .replace(/\s+/g, '_')}-front-image.png`}
+          .replace(/\s+/g, '_')
+          .replace(/'/g, '_')}-front-image.png`}
         alt=""
         className="front-image"
       />
       <img
         src={`../../../../../assets/img/${personnage.character
           .toLowerCase()
-          .replace(/\s+/g, '_')}-back-image.png`}
+          .replace(/\s+/g, '_')
+          .replace(/'/g, '_')}-back-image.png`}
         alt=""
         className="back-image"
       />
