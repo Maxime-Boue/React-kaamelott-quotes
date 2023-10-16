@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-param-reassign */
+import { useEffect } from 'react';
 import { KaamelottType } from '../../../type/type';
 import ProfileItem from './ProfileItem/ProfileItem';
 import './Profiles.scss';
@@ -22,7 +23,6 @@ function Profiles({ personnages, setQuote }: ProfilesProps) {
   const personnagesDejaAffiches = new Set();
 
   const personnagesUniques = [];
-
   const personnagesMelanges = shuffleArray(personnages);
 
   for (const personnage of personnagesMelanges) {

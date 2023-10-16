@@ -6,7 +6,8 @@ type ProfileItemProps = {
   setQuote: () => void;
 };
 function ProfileItem({ personnage, setQuote }: ProfileItemProps) {
-  const handleClickSelector = () => {
+  const handleClickSelector = (e) => {
+    e.preventDefault();
     console.log('coucou');
     console.log(personnage);
 
@@ -17,12 +18,16 @@ function ProfileItem({ personnage, setQuote }: ProfileItemProps) {
     <article className="character" onClick={handleClickSelector}>
       <p className="name">{personnage.character}</p>
       <img
-        src={`../../../../../assets/img/${personnage.character.toLowerCase()}-front-image.png`}
+        src={`../../../../../assets/img/${personnage.character
+          .toLowerCase()
+          .replace(/\s+/g, '_')}-front-image.png`}
         alt=""
         className="front-image"
       />
       <img
-        src={`../../../../../assets/img/${personnage.character.toLowerCase()}-back-image.png`}
+        src={`../../../../../assets/img/${personnage.character
+          .toLowerCase()
+          .replace(/\s+/g, '_')}-back-image.png`}
         alt=""
         className="back-image"
       />
