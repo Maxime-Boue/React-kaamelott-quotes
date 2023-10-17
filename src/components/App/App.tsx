@@ -31,8 +31,9 @@ function App() {
     }
     return array;
   }
-
   const shuffledQuotes = shuffleArray(characterQuotes);
+
+  const allQuotes = quotesData.map((characterQuote) => characterQuote.quote);
 
   return (
     <div className="App">
@@ -43,7 +44,11 @@ function App() {
           setQuote={setQuote}
           setCharacter={setCharacter}
         />
-        <GeneratorButton setQuote={setQuote} shuffledQuotes={shuffledQuotes} />
+        <GeneratorButton
+          setQuote={setQuote}
+          shuffledQuotes={shuffledQuotes}
+          allQuotes={allQuotes}
+        />
         <Quotes citation={`"${quote}"`} />
       </main>
       <Footer />

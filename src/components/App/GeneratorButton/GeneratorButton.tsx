@@ -3,14 +3,25 @@ import { KaamelottType } from '../../../type/type';
 
 type GeneratorButtonProps = {
   shuffledQuotes: KaamelottType[];
+  allQuotes: string[];
   setQuote: React.Dispatch<React.SetStateAction<string>>;
 };
-function GeneratorButton({ setQuote, shuffledQuotes }: GeneratorButtonProps) {
+function GeneratorButton({
+  allQuotes,
+  setQuote,
+  shuffledQuotes,
+}: GeneratorButtonProps) {
   const handleClickGenerator = () => {
     if (shuffledQuotes.length > 0) {
-      const randomQuote = shuffledQuotes[0].quote;
-
+      const randomIndex = Math.floor(Math.random() * shuffledQuotes.length);
+      const randomQuote = shuffledQuotes[randomIndex].quote;
       setQuote(randomQuote);
+    } else if (allQuotes.length > 0) {
+      const randomIndex = Math.floor(Math.random() * allQuotes.length);
+      const randomQuote = allQuotes[randomIndex];
+      setQuote(randomQuote);
+    } else {
+      setQuote('Aucune citation disponible.');
     }
   };
 

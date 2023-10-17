@@ -18,6 +18,7 @@ function ProfileItem({
   const handleClickSelector = () => {
     if (activeCard === personnage.quote) {
       activateCard('');
+      setCharacter('');
     } else {
       activateCard(personnage.quote);
       setQuote(personnage.quote);
