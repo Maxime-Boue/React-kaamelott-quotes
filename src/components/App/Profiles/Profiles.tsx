@@ -8,6 +8,7 @@ import './Profiles.scss';
 type ProfilesProps = {
   personnages: KaamelottType[];
   setQuote: React.Dispatch<React.SetStateAction<string>>;
+  setCharacter: React.Dispatch<React.SetStateAction<string>>;
 };
 
 function shuffleArray(array: KaamelottType[]) {
@@ -19,10 +20,15 @@ function shuffleArray(array: KaamelottType[]) {
   return array;
 }
 
-function Profiles({ personnages, setQuote }: ProfilesProps) {
+function Profiles({ personnages, setQuote, setCharacter }: ProfilesProps) {
   const [personnagesUniques, setPersonnagesUniques] = useState<KaamelottType[]>(
     []
   );
+  const [activeCard, setActiveCard] = useState<string | null>(null);
+
+  const activateCard = (quote: string) => {
+    setActiveCard(quote);
+  };
 
   useEffect(() => {
     const personnagesDejaAffiches = new Set();
@@ -50,6 +56,9 @@ function Profiles({ personnages, setQuote }: ProfilesProps) {
           key={personnage.character}
           personnage={personnage}
           setQuote={setQuote}
+          setCharacter={setCharacter}
+          activeCard={activeCard}
+          activateCard={activateCard}
         />
       ))}
     </div>

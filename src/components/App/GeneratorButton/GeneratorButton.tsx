@@ -1,8 +1,22 @@
+import { useEffect } from 'react';
 import './GeneratorButton.scss';
+import { KaamelottType } from '../../../type/type';
 
-function GeneratorButton() {
+type GeneratorButtonProps = {
+  shuffledQuotes: KaamelottType[];
+  setQuote: React.Dispatch<React.SetStateAction<string>>;
+};
+function GeneratorButton({ setQuote, shuffledQuotes }: GeneratorButtonProps) {
+  const handleClickGenerator = () => {
+    if (shuffledQuotes.length > 0) {
+      const randomQuote = shuffledQuotes[0].quote;
+
+      setQuote(randomQuote);
+    }
+  };
+
   return (
-    <button type="button" className="button">
+    <button type="button" className="button" onClick={handleClickGenerator}>
       INTERPREEEETE !!!
     </button>
   );
