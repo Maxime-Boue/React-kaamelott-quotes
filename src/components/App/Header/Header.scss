@@ -1,9 +1,19 @@
 @use '../../../styles/variables' as v;
 
 .header {
-  background-color: #f1ff9f;
+  color: v.$color-primary;
+  font-family: 'Lato';
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: v.$gutter; 
+  padding: v.$gutter;
+  gap: v.$gutter;
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  .logo {
+    width: 6em;
+  }
 }

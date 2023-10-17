@@ -6,23 +6,11 @@ import GeneratorButton from './GeneratorButton/GeneratorButton';
 import Quotes from './Quotes/Quotes';
 import Footer from './Footer/Footer';
 import quotesData from '../../data/quotes.json';
+import { KaamelottType } from '../../type/type';
 
 function App() {
   const [quote, setQuote] = useState('One super hilarious quote');
   const [character, setCharacter] = useState('');
-
-  // console.log(character);
-  // useEffect(() => {
-  //   // const quoteByCharacter = [];
-  //   quotesData.map((characterQuote) => {
-  //     if (character === characterQuote.character) {
-  //       // quoteByCharacter.push(characterQuote);
-  //       return characterQuote;
-  //     }
-  //     console.log(characterQuote);
-  //     return '';
-  //   });
-  // }, [character]);
 
   const [characterQuotes, setCharacterQuotes] = useState([]);
 
@@ -34,11 +22,11 @@ function App() {
     setCharacterQuotes(filteredQuotes);
   }, [character]);
 
-  // console.log(characterQuotes);
-
   function shuffleArray(array: KaamelottType[]) {
+    // eslint-disable-next-line no-plusplus
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
+      // eslint-disable-next-line no-param-reassign
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;

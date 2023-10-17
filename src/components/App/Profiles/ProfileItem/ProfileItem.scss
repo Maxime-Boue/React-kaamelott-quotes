@@ -50,7 +50,7 @@ img {
   opacity: 0;
   transition: opacity var(--timing);
   border-radius: 10px;
-  border: 3px solid #fff;
+  // border: 3px solid #fff;
 }
 
 .character:hover::before,
@@ -64,7 +64,7 @@ img {
   inset: 80% 0.5rem 0.5rem;
   translate: 0;
   transform: translateZ(-100px);
-  background: black;
+  background: rgba($color: #fff, $alpha: 0.5);
   filter: blur(1rem);
   z-index: 1;
   transition: rotate var(--timing), translate var(--timing) ease;
@@ -83,7 +83,7 @@ img {
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
-  border: 3px solid #fff;
+  // border: 2px solid #fff;
 }
 
 .name,

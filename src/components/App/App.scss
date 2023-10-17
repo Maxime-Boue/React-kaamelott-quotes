@@ -5,15 +5,14 @@
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
-  background-color: aquamarine;
+  // background-color: aquamarine;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // padding-bottom: v.$gutter;
 }
 
 main {
-  background-color: rgb(205, 205, 205);
+  // background-color: v.$color-primary;
   display: flex;
   flex-direction: column;
   flex-grow: 2;

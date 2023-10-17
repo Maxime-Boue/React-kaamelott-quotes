@@ -1,17 +1,45 @@
 @use '../../../styles/variables' as v;
 
 .button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   margin: calc(v.$gutter * 0.5) auto;
   margin-top: v.$gutter;
   padding: v.$gutter;
   border-radius: 1.5rem;
-  border: none;
+  border: 2px solid v.$color;
+  background-color: v.$color-primary;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    transition: 0.8s;
-    background-color: black;
-    color: white;
+    transition: all 0.2s ease-in-out;
+    background-color: v.$color-bg;
+    color: v.$color;
     cursor: pointer;
+
+    p {
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .epee-logo {
+      opacity: 1;
+      transform: translateX(-0%);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  p {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .epee-logo {
+    width: 80%;
+    opacity: 0;
+    transform: translateX(-75%);
+    position: absolute;
   }
 }

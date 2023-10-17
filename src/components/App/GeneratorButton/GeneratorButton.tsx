@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './GeneratorButton.scss';
 import { KaamelottType } from '../../../type/type';
 
@@ -17,7 +16,12 @@ function GeneratorButton({ setQuote, shuffledQuotes }: GeneratorButtonProps) {
 
   return (
     <button type="button" className="button" onClick={handleClickGenerator}>
-      INTERPREEEETE !!!
+      <p>Interprète !</p>
+      <img
+        className="epee-logo"
+        src="../../../assets/img/epee.png"
+        alt="épée de kaamelott"
+      />
     </button>
   );
 }
