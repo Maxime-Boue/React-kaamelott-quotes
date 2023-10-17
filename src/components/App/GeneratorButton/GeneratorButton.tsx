@@ -13,10 +13,12 @@ function GeneratorButton({
 }: GeneratorButtonProps) {
   const handleClickGenerator = () => {
     if (shuffledQuotes.length > 0) {
+      // On choisit une citation parmi les citations filtrées
       const randomIndex = Math.floor(Math.random() * shuffledQuotes.length);
       const randomQuote = shuffledQuotes[randomIndex].quote;
       setQuote(randomQuote);
     } else if (allQuotes.length > 0) {
+      // On choisit une citation parmi toutes les citations
       const randomIndex = Math.floor(Math.random() * allQuotes.length);
       const randomQuote = allQuotes[randomIndex];
       setQuote(randomQuote);

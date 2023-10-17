@@ -9,7 +9,9 @@ import quotesData from '../../data/quotes.json';
 import { KaamelottType } from '../../type/type';
 
 function App() {
-  const [quote, setQuote] = useState('One super hilarious quote');
+  const [quote, setQuote] = useState(
+    'Le dieu qui terrasse ses ennemis par l’éloquence. Un joli sujet de médaillon.'
+  );
   const [character, setCharacter] = useState('');
 
   const [characterQuotes, setCharacterQuotes] = useState([]);
@@ -33,6 +35,7 @@ function App() {
   }
   const shuffledQuotes = shuffleArray(characterQuotes);
 
+  // On récupère l'ensemble des citations
   const allQuotes = quotesData.map((characterQuote) => characterQuote.quote);
 
   return (
