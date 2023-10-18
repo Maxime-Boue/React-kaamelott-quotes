@@ -1,9 +1,16 @@
 @use '../../../styles/variables' as v;
 
 footer {
-  background-color: v.$color-primary;
+  color: v.$color;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: v.$gutter;
+
+  a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: v.$color;
+    // font-style: italic;
+  }
 }
