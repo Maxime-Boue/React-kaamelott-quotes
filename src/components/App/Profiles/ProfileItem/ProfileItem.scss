@@ -124,6 +124,6 @@ img {
 .character.active .front-image {
   opacity: 1;
   /* Le translateY est à adapter en fonction de l'image en front*/
-  transform: translateY(-1.4rem) translateZ(0px);
+  transform: translateY(-1.25rem) translateZ(0px);
   rotate: x calc(var(--rotation) * -1);
 }
