@@ -5,14 +5,12 @@
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
-  // background-color: aquamarine;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 main {
-  // background-color: v.$color-primary;
   display: flex;
   flex-direction: column;
   flex-grow: 2;
