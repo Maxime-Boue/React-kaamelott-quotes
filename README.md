@@ -197,6 +197,6 @@ Project Link: [https://github.com/Maxime-Boue/React-kaamelott-quotes](https://gi
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-nicolas-url]: https://linkedin.com/in/nicolas-saumont
 [linkedin-maxime-url]: https://www.linkedin.com/in/maxime-bou%C3%A9-dev/
-[product-screenshot]: public/img/screenshot.png
+[product-screenshot]: assets/img/screenshot.png
 [React]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge
 [React-url]: https://react.dev/
